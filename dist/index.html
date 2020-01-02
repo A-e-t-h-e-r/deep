@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>deep</title>
+    <meta name="author" content="许滨麟" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+
+<body>
+    <div id="title">
+        <div id="title-switch">
+            <button id="switch">快速</button>
+            <h1>风格迁移.js</h1>
+        </div>
+
+        <div id="back">
+            <div class="intro">
+                <h3><span>1.  </span>提取图片风格</h3>
+                <br>
+                <p>选择一张本地图片或者预置的图片，提取它的风格，选择完毕后点击<span>提取</span>，等待5-10min</p>
+
+            </div>
+            <div class="kk"></div>
+            <div class="intro">
+                <h3><span>2.  </span>选择内容图片</h3>
+                <br>
+                <p>选择一张本地图片或者预置的图片，作为迁移的目标，选择完毕后点击<span>训练</span>，稍等片刻</p>
+            </div>
+            <div class="kk"></div>
+            <div class="intro">
+                <h3><span>3.  </span>生成图片</h3>
+                <br>
+                <p>生成迁移成功后的图片，点击<span>保存</span>可以下载到本地</p>
+            </div>
+        </div>
+    </div>
+    <div id="main-fast">
+        <div class="dis">
+            <div id="style-fast" class="display">
+                <select id="styleselect-fast">
+                    <option value="" disabled>选择风格图片</option>
+                    <option value="file">从文件夹选择</option>
+                    <option value="style" selected>udine</option>
+                </select>
+                <img src="udnie.jpg" id="styleimg-fast">
+                <button id="train-fast" class="process">提取</button>
+
+            </div>
+
+        </div>
+        <div class="mid">
+            <button id="add-fast" class="see">+</button>
+        </div>
+        <div class="dis">
+            <div id="content-fast" class="display">
+                <select id="contentselect-fast">
+                    <option value="" disabled>选择内容图片</option>
+                    <option value="file">从文件夹选择</option>
+                    <option value="style" selected>狗</option>
+                </select>
+                <img src="dog.jpg" id="contentimg-fast">
+                <button id="confirm-fast"class="process">训练</button>
+
+
+            </div>
+
+        </div>
+        <div class="mid">
+            <button id="sum-fast" class="see" >=</button>
+        </div>
+        <div class="dis">
+            <div id="result-fast" class="display">
+                <button id="result_button-fast" class="process">保存</button>
+                <canvas id="resultimg-fast"></canvas>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div class="dis">
+            <div id="style" class="display">
+                <select id="styleselect">
+                    <option value="" disabled>选择风格图片</option>
+                    <option value="file">从文件夹选择</option>
+                    <option value="style" selected>星月夜</option>
+                </select>
+                <img src="style.jpg" id="styleimg">
+                <button id="train" class="process">提取</button>
+
+            </div>
+
+        </div>
+        <div class="mid">
+            <button id="add" class="see">+</button>
+        </div>
+        <div class="dis">
+            <div id="content" class="display">
+                <select id="contentselect">
+                    <option value="" disabled>选择内容图片</option>
+                    <option value="file">从文件夹选择</option>
+                    <option value="style" selected>狗</option>
+                </select>
+                <img src="dog.jpg" id="contentimg">
+                <button id="confirm"class="process">训练</button>
+
+
+            </div>
+
+        </div>
+        <div class="mid">
+            <button id="sum" class="see" >=</button>
+        </div>
+        <div class="dis">
+            <div id="result" class="display">
+                <button id="result_button" class="process">保存</button>
+                <canvas id="resultimg"></canvas>
+            </div>
+        </div>
+    </div>
+    <input type="file" id="sinput" accept="image/*" style="display:none">
+    <input type="file" id="cinput" accept="image/*" style="display:none">
+    <script src="bundle.js" type="module"></script>
+</body>
+</html>
+
+
